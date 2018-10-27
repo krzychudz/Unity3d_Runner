@@ -2,3 +2,7 @@
 Library
 Packages
 *.apk
+.meta
+.vs
+*.csproj
+obj
