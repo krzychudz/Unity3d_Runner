@@ -23,8 +23,7 @@ public class barrierSpawn : MonoBehaviour {
         if(spawnTime <= 0)
         {
            var obj = (GameObject)Instantiate(barrier, barrierSpawnTransform.position, Quaternion.identity);
-           Destroy(obj, 10);
-
+ 
             spawnTime = tmpSpawnTime;
         }
 
