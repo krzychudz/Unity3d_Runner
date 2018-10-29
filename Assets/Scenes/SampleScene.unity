@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154140395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.24, y: -2.8, z: -0.12890625}
+  m_LocalPosition: {x: 12.24, y: -1.24, z: -0.12890625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -227,9 +227,10 @@ GameObject:
   m_Component:
   - component: {fileID: 522547177}
   - component: {fileID: 522547176}
-  - component: {fileID: 522547175}
   - component: {fileID: 522547174}
   - component: {fileID: 522547178}
+  - component: {fileID: 522547179}
+  - component: {fileID: 522547175}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -258,7 +259,7 @@ BoxCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_AutoTiling: 1
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
@@ -335,8 +336,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 522547173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: -0.54, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -0.05, y: 1.33, z: 0}
+  m_LocalScale: {x: 2, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -353,6 +354,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 650
+  slideTime: 1.5
+--- !u!114 &522547179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522547173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b003325bc8cb374a9afffe2377abf8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &798289746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1793046321230510, guid: f9226ed3f178bc24bb89c5e93fc1cff6,
@@ -453,6 +466,10 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722990258512118, guid: 333f32197487bd444b410cf20918591b, type: 2}
+      propertyPath: m_TagString
+      value: barrier
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 333f32197487bd444b410cf20918591b, type: 2}
