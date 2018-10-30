@@ -44,21 +44,20 @@ public class playerMovement : MonoBehaviour {
 
             if(touchDeltaPosition.y > -15 && touchDeltaPosition.y < 0 && isRunning)
             {
-                boxCollider2d.size = new Vector2((float)1.0, (float)0.25);
-                boxCollider2d.offset = new Vector2(0, (float)-0.125);
+                boxCollider2d.size = new Vector2((float)2.0, (float)1.0);
+                boxCollider2d.offset = new Vector2(0, 0);
                 isSliding = true;
                 isRunning = false;
+                gameObject.transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 0, 90);
+
             }
 
         }
 
-
+        
        if(Input.GetMouseButtonDown(0) && isRunning) // DEBUG
         {
-            boxCollider2d.size = new Vector2((float)1.0, (float)0.25);
-            boxCollider2d.offset = new Vector2(0, (float)-0.125);
-            isSliding = true;
-            isRunning = false;
+
 
         }
 
@@ -71,8 +70,10 @@ public class playerMovement : MonoBehaviour {
                 isSliding = false;
                 isRunning = true;
 
-                boxCollider2d.size = new Vector2((float)0.5, (float)0.5);
+                boxCollider2d.size = new Vector2((float)1.0, (float)2.0);
                 boxCollider2d.offset = new Vector2(0, 0);
+
+                gameObject.transform.GetChild(0).gameObject.transform.eulerAngles = new Vector3(0, 0, 0);
             }
         }
 
