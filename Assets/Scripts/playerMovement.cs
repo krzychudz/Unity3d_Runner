@@ -35,14 +35,14 @@ public class playerMovement : MonoBehaviour {
             // Get movement of the finger since last frame
             Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 
-            if(touchDeltaPosition.y > 15 && isRunning)
+            if(touchDeltaPosition.y > 15 &&  isRunning)
             {
                 rb2d.AddForce(new Vector2(0, jumpForce));
                 isJumping = true;
                 isRunning = false;
             }
 
-            if(touchDeltaPosition.y > -15 && touchDeltaPosition.y < 0 && isRunning)
+            if(touchDeltaPosition.y < -15 && isRunning)
             {
                 boxCollider2d.size = new Vector2((float)2.0, (float)1.0);
                 boxCollider2d.offset = new Vector2(0, 0);

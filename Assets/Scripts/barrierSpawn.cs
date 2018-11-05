@@ -6,6 +6,7 @@ public class barrierSpawn : MonoBehaviour {
 
     public GameObject barrier;
     public Transform barrierSpawnTransform;
+    public Transform barrierSpawnTransform1;
     public float spawnTime;
 
     float tmpSpawnTime;
@@ -22,8 +23,18 @@ public class barrierSpawn : MonoBehaviour {
 
         if(spawnTime <= 0)
         {
-           var obj = (GameObject)Instantiate(barrier, barrierSpawnTransform.position, Quaternion.identity);
- 
+            int rand = Random.Range(1, 3);
+
+            if(rand == 1)
+            {
+                var obj = (GameObject)Instantiate(barrier, barrierSpawnTransform.position, Quaternion.identity);
+            }
+            else
+            {
+                var obj = (GameObject)Instantiate(barrier, barrierSpawnTransform1.position, Quaternion.identity);
+            }
+
+           
             spawnTime = tmpSpawnTime;
         }
 

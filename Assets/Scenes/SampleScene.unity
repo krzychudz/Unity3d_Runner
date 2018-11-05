@@ -135,12 +135,17 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154140395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.24, y: -1.24, z: -0.12890625}
+  m_LocalPosition: {x: 12.24, y: -3.46, z: -0.12890625}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &219770043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1172413904461864, guid: eddd365280a2bd34089cc821cde29ce1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1071085184}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 555782c1f9bd2b84c9b1972fc3494112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 650
+  jumpForce: 500
   slideTime: 1.5
 --- !u!50 &570444378
 Rigidbody2D:
@@ -442,6 +447,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectSpeed: 5
+--- !u!1001 &1071085184
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 13.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 6.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4324090756452338, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1172413904461864, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+      propertyPath: m_TagString
+      value: barrier
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eddd365280a2bd34089cc821cde29ce1, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1 &1581657706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581657707}
+  m_Layer: 0
+  m_Name: barrierSpawnPoint1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581657707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581657706}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.24, y: -1.34, z: -0.12890625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1600133244
 Prefab:
   m_ObjectHideFlags: 0
@@ -530,8 +609,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f086a6c4231909848ae8dbf8f4c6310e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barrier: {fileID: 898930060}
+  barrier: {fileID: 219770043}
   barrierSpawnTransform: {fileID: 154140396}
+  barrierSpawnTransform1: {fileID: 1581657707}
   spawnTime: 4
 --- !u!4 &1846280227
 Transform:
